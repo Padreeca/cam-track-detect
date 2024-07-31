@@ -1,0 +1,21 @@
+# abre tela tkinter
+
+# seleciona a pasta de imagens com OS
+
+# verifica final do arquivo, se é imagem
+
+# lista = none
+
+# loop para guardar todas as imagens em uma lista
+
+# pega tamanho da lista
+  
+# com base na lista anterior, cria outra lista das imagens em cinza, para utilizar força bruta (tentar com as imagens coloridas)
+
+# OPCIONAL -- captar a relação dos primeiros x frames, fazer a média e colocar como limite de relação (sem objeto)
+
+# compara frame atual com todos da lista, caminhando sobre ela, se alguma relação foi boa printa o nome do arquivo
+
+# inicia o tracker
+
+# quando o tracker não encontrar boa correlação, parar e voltar pra força bruta
