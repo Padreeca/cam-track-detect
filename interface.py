@@ -16,6 +16,7 @@ def main_screen_config():
     main_screen.config(background="#e9e9e9")
     main_screen.geometry("1000x600")
     centralize_window(main_screen)
+    bandeira=0 ################ HOME
 
 def main_screen_components():
     btn_photo = Button(main_screen, text="Tirar foto", command=btn_tirarFoto)
@@ -134,11 +135,10 @@ def btn_select_folder():
 
     selected = filedialog.askdirectory(initialdir=system_pictures_path)
 
-    # array_imagens= []                         TEM QUE ZERAR NA TELA PRINCIPAL, MAS NA DE FOTO NÃO
-
     if selected=='':
         pass
     else:
+        array_imagens = []
         inside_folder_path=selected
         for arquivo in os.listdir(inside_folder_path):
             if arquivo.lower().endswith(('.png','.jpg','.jpeg')):
@@ -178,7 +178,11 @@ def auto_close_carregando():
     array_imagens= []
 
 def print_on_folder():
-    global n_img, nome_imagem, inside_folder_path
+    global n_img, nome_imagem, inside_folder_path, array_imagens
+
+    print(array_imagens)
+
+    n_img=len(array_imagens)+1
 
     nome_imagem= f"Objeto_{n_img}.jpg"
     caminho_nome = os.path.join(inside_folder_path, nome_imagem)
