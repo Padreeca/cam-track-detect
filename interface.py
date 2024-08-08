@@ -16,7 +16,7 @@ def main_screen_config():
     main_screen.config(background="#e9e9e9")
     main_screen.geometry("1000x600")
     centralize_window(main_screen)
-    bandeira=0 ################ HOME
+    # bandeira=0 ################ HOME
 
 def main_screen_components():
     btn_photo = Button(main_screen, text="Tirar foto", command=btn_tirarFoto)
@@ -38,7 +38,9 @@ def photo_screen_open():
     photo_screen = Toplevel(main_screen)
     photo_screen.title("Cam Detector")
     photo_screen.config(background="#000000")
+    # centralize_window(photo_screen)
     photo_screen.geometry("1200x745")
+    
 
     # centralize_window(photo_screen)
     photo_screen.focus_force()
@@ -59,7 +61,7 @@ def photo_screen_open():
     open_folder = Button(photo_screen, text="Verificar Pasta", command=see_folder)
     open_folder.place(relx=0.90, rely=0.700, anchor=CENTER)
 
-    change_folder_btn = Button(photo_screen, text="Alterar Pasta", command=btn_select_folder) 
+    change_folder_btn = Button(photo_screen, text="Alterar Pasta", command=btn_select_folder)
     change_folder_btn.place(relx=0.90, rely=0.770, anchor=CENTER)
 
     btn_start_detracking_photo = Button(photo_screen, text="Iniciar Detecção", command=start_detection) #####
@@ -157,7 +159,8 @@ def start_detection():
             print(inside_folder_path)
             print(array_imagens)
         else:
-            print("INICIAR DETECÇÃO")
+            background_screen_open()
+            # print("INICIAR DETECÇÃO")
             print(inside_folder_path)
             print(array_imagens)
 
@@ -198,6 +201,19 @@ def see_folder():
 def back_home():
     main_screen.deiconify()
     photo_screen.destroy()
+
+def background_screen_open():
+    background_screen = Toplevel(photo_screen)
+    background_screen.title("Cam Detector")
+    background_screen.config(background="#e9e9e9")
+    background_screen.geometry("1200x745")
+    centralize_window(background_screen)
+    background_screen.focus_force()
+
+
+
+    lbl_background = Label(background_screen,text="Background")
+    lbl_background.place(x=0.5, y=0.1)
 
 
 system_pictures_path = os.path.join(os.path.expanduser("~"), 'Pictures')

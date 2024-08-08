@@ -9,9 +9,9 @@ online=True
 foto_um=None
 foto_dois=None
 foto_tres=None
-i=0                  # 0 -> printar tudo / 1 -> printar uma / 2 -> printar nenhuma
+i=0                     # 0 -> printar tudo / 1 -> printar uma / 2 -> printar nenhuma
 obj1=0                  # 0 -> selecionar roi / 1 -> roi já selecionado
-obj2=1                  #           ""                  ""
+obj2=0                  #           ""                  ""
 
 foto_x=None
 
@@ -63,7 +63,7 @@ if cam.isOpened():
             online=False
             break
 
-       
+
 
         #ler e transformar as imagens em cinza
         img_reference1 = cv2.imread("chave.png", cv2.IMREAD_GRAYSCALE)      #IMAGEM 1

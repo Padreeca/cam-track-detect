@@ -1,7 +1,7 @@
 import cv2
 
 # Captura da imagem estática e seleção da ROI
-fita_img = cv2.imread("fita.png")
+fita_img = cv2.imread("foto1.jpg")
 fita_quadrado = cv2.selectROI("select_roi", fita_img, fromCenter=False, showCrosshair=False)
 cv2.destroyWindow("select_roi")     # Fecha a janela de seleção de ROI
 
