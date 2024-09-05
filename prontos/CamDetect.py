@@ -64,7 +64,6 @@ if cam.isOpened():
             break
 
 
-
         #ler e transformar as imagens em cinza
         img_reference1 = cv2.imread("chave.png", cv2.IMREAD_GRAYSCALE)      #IMAGEM 1
         img_reference2 = cv2.imread("fita.png", cv2.IMREAD_GRAYSCALE)      #IMAGEM 2
@@ -72,10 +71,10 @@ if cam.isOpened():
 
 
         #transforma o frame em foto
-        cv2.imwrite("fotoX.jpeg", frame)
+        # cv2.imwrite("fotoX.jpeg", frame)                   # aqui
 
 
-        img_X = cv2.imread("fotoX.jpeg", cv2.IMREAD_GRAYSCALE)              #IMAGEM COMPARADA
+        img_X = cv2.imread(frame, cv2.IMREAD_GRAYSCALE)              #IMAGEM COMPARADA
 
 
         #cria orientação. keypoints e descritores para cada imagem

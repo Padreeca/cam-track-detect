@@ -1,0 +1,15 @@
+ao START DETECTION -> solicitar fundo da imagem
+
+converte o fundo para GREY 
+
+converte todas as imagens tiradas/pasta pra GREY, subtrai o fundo de cada uma, colocando-as em um novo array
+
+frame atual é convertido em GREY removendo o fundo
+
+
+
+
+
+
+while objeto detectado = true:
+tracking
